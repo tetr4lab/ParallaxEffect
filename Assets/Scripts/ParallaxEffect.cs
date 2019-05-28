@@ -9,9 +9,9 @@ public class ParallaxEffect : MonoBehaviour {
 	[SerializeField, TooltipAttribute ("復帰係数")] private float returnRatio = 0.4f;
 	[SerializeField, TooltipAttribute ("水平有効")] private bool Horizontal = true;
 	[SerializeField, TooltipAttribute ("垂直有効")] private bool Vertical = true;
-	[SerializeField, TooltipAttribute ("有効")] public bool Reactable = true;
 
 	#region static
+	public static bool Reactable = true; // 有効
 	private static int useCount = 0; // 総使用数
 	private static bool detection; // 検出
 	private static Vector3 initialRotationRate; // ジャイロの初期ローテーション
@@ -50,7 +50,7 @@ public class ParallaxEffect : MonoBehaviour {
 
 	// 駆動
 	void Update () {
-		if (ParallaxEffect.gyroEnabled && this.Reactable) {
+		if (ParallaxEffect.gyroEnabled && Reactable) {
 			var rate = Input.gyro.rotationRateUnbiased;
 			// 検出
 			if (!ParallaxEffect.detection && rate != ParallaxEffect.initialRotationRate) {
