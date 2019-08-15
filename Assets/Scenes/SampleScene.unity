@@ -231,14 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5df0cb10a9e7c42a5bff68c76cf78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftRatio: 100
+  shiftRatio: 3
   deepness: 3
   movableRadius: 1000
-  returnable: 1
-  recoverRatio: 0.4
+  returnRatio: 0.013
   Horizontal: 1
   Vertical: 1
-  Reactable: 1
 --- !u!114 &187776519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,14 +324,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5df0cb10a9e7c42a5bff68c76cf78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftRatio: 100
+  shiftRatio: 3
   deepness: 2
   movableRadius: 1000
-  returnable: 1
-  recoverRatio: 0.4
+  returnRatio: 0.013
   Horizontal: 1
   Vertical: 1
-  Reactable: 1
 --- !u!114 &353441496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,14 +602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5df0cb10a9e7c42a5bff68c76cf78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftRatio: 100
+  shiftRatio: 3
   deepness: 1
   movableRadius: 1000
-  returnable: 1
-  recoverRatio: 0.4
+  returnRatio: 0.013
   Horizontal: 1
   Vertical: 1
-  Reactable: 1
 --- !u!1 &1801074584
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,14 +658,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5df0cb10a9e7c42a5bff68c76cf78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftRatio: 100
+  shiftRatio: 3
   deepness: 4
   movableRadius: 1000
-  returnable: 1
-  recoverRatio: 0.4
+  returnRatio: 0.013
   Horizontal: 1
   Vertical: 1
-  Reactable: 1
 --- !u!114 &1801074587
 MonoBehaviour:
   m_ObjectHideFlags: 0

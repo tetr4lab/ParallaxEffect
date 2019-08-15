@@ -3,10 +3,10 @@
 [DisallowMultipleComponent]
 public class ParallaxEffect : MonoBehaviour {
 
-	[SerializeField, TooltipAttribute ("移動係数")] private float shiftRatio = 100f;
+	[SerializeField, TooltipAttribute ("移動係数")] private float shiftRatio = 3f;
 	[SerializeField, TooltipAttribute ("深度")] private float deepness = 1f;
 	[SerializeField, TooltipAttribute ("可動半径")] private float movableRadius = 1000f;
-	[SerializeField, TooltipAttribute ("復帰係数")] private float returnRatio = 0.4f;
+	[SerializeField, TooltipAttribute ("復帰係数")] private float returnRatio = 0.013f;
 	[SerializeField, TooltipAttribute ("水平有効")] private bool Horizontal = true;
 	[SerializeField, TooltipAttribute ("垂直有効")] private bool Vertical = true;
 
@@ -62,7 +62,7 @@ public class ParallaxEffect : MonoBehaviour {
 			// シフト
 			if (ParallaxEffect.detection && this.shiftRatio != 0f) {	// ジャイロあり、駆動意思あり
 				var pos = this.transform.localPosition;
-				pos += new Vector3 (Horizontal ? -rate.y : 0, Vertical ? rate.x : 0, 0) * Time.deltaTime * this.shiftRatio * this.deepness;
+				pos += new Vector3 (Horizontal ? -rate.y : 0, Vertical ? rate.x : 0, 0) *  this.shiftRatio * this.deepness;
 				if ((pos - this.homePosition).magnitude > this.movableRadius) {
 					pos = this.homePosition + (pos - this.homePosition).normalized * this.movableRadius;
 				}
@@ -74,7 +74,7 @@ public class ParallaxEffect : MonoBehaviour {
 				if (distance.sqrMagnitude <= 1f) {
 					this.transform.localPosition = homePosition;
 				} else {
-					this.transform.localPosition += distance * Time.deltaTime * this.returnRatio * this.deepness;
+					this.transform.localPosition += distance * Time.deltaTime *  this.deepness;
 				}
 			}
 		} else {
