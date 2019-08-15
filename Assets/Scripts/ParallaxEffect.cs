@@ -6,7 +6,7 @@ public class ParallaxEffect : MonoBehaviour {
 	[SerializeField, TooltipAttribute ("移動係数")] private float shiftRatio = 3f;
 	[SerializeField, TooltipAttribute ("深度")] private float deepness = 1f;
 	[SerializeField, TooltipAttribute ("可動半径")] private float movableRadius = 1000f;
-	[SerializeField, TooltipAttribute ("復帰係数")] private float returnRatio = 0.013f;
+	[SerializeField, TooltipAttribute ("復帰係数")] private float returnRatio = 0.2f;
 	[SerializeField, TooltipAttribute ("水平有効")] private bool Horizontal = true;
 	[SerializeField, TooltipAttribute ("垂直有効")] private bool Vertical = true;
 
@@ -74,7 +74,7 @@ public class ParallaxEffect : MonoBehaviour {
 				if (distance.sqrMagnitude <= 1f) {
 					this.transform.localPosition = homePosition;
 				} else {
-					this.transform.localPosition += distance * Time.deltaTime *  this.deepness;
+					this.transform.localPosition += distance * Time.deltaTime * this.returnRatio * this.deepness;
 				}
 			}
 		} else {

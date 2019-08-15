@@ -234,7 +234,7 @@ MonoBehaviour:
   shiftRatio: 3
   deepness: 3
   movableRadius: 1000
-  returnRatio: 0.013
+  returnRatio: 0.2
   Horizontal: 1
   Vertical: 1
 --- !u!114 &187776519
@@ -327,7 +327,7 @@ MonoBehaviour:
   shiftRatio: 3
   deepness: 2
   movableRadius: 1000
-  returnRatio: 0.013
+  returnRatio: 0.2
   Horizontal: 1
   Vertical: 1
 --- !u!114 &353441496
@@ -605,7 +605,7 @@ MonoBehaviour:
   shiftRatio: 3
   deepness: 1
   movableRadius: 1000
-  returnRatio: 0.013
+  returnRatio: 0.2
   Horizontal: 1
   Vertical: 1
 --- !u!1 &1801074584
@@ -661,7 +661,7 @@ MonoBehaviour:
   shiftRatio: 3
   deepness: 4
   movableRadius: 1000
-  returnRatio: 0.013
+  returnRatio: 0.2
   Horizontal: 1
   Vertical: 1
 --- !u!114 &1801074587
